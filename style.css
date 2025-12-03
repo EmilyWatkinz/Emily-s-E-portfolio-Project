@@ -28,6 +28,7 @@ a {
 
 section {
     background-color: rgb(245, 245, 245);
+    transition: all 300ms ease;
 }
 
 input, textarea {
@@ -150,6 +151,39 @@ nav,
     opacity: 0;
     visibility: hidden;
     transition: all 400ms ease;
+}
+
+.dark__theme .title,
+.dark__theme .section__title,
+.dark__theme .nav__link--anchor,
+.dark__theme .section__sub-title,
+.dark__theme .fa-solid,
+.dark__theme .header__para
+{
+    color: white;
+
+}
+
+.dark__theme section {
+    background-color: #242424;
+}
+
+.dark__theme #personal-logo {
+    filter: none;
+}
+
+.dark__theme .scroll__icon {
+    border-color: white;
+}
+
+.dark__theme .scroll__icon:after,
+.dark__theme .link__hover-effect--black:after {
+    background-color: white;
+}
+
+.dark__theme .mail__btn {
+    background-color: white;
+    color: #242424;
 }
 
 /*
@@ -578,3 +612,59 @@ footer {
 .footer__copyright {
     color: white;
 }
+
+/*
+
+SHAPES 
+
+*/  
+
+.shape {
+    position: fixed;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
+}
+
