@@ -25,7 +25,7 @@
                 <img id="personal-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtU4XprOSYzg14RHj6GDiveOVS7vCrtkUpw&s" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -77,9 +77,11 @@
                 </div>
             </div>
         </header>
+        <a href="#">
         <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-regular fa-envelope"></i>
         </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -239,28 +241,28 @@
             <img class="footer__logo--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtU4XprOSYzg14RHj6GDiveOVS7vCrtkUpw&s" alt="">
            </figure>
            <div class="footer__social--list">
-            <a href="https://github.com/EmilyWatkinz" target="blank" class="
+            <a href="https://github.com/EmilyWatkinz" target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
             ">  
             GitHub
             </a>
-            <a href="https://www.linkedin.com/in/emily-elizabeth-watkins-a8750138b/" target="blank" class="
+            <a href="https://www.linkedin.com/in/emily-elizabeth-watkins-a8750138b/" target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
             ">  
             LinkedIn
             </a>
-            <a href="https://github.com/EmilyWatkinz" target="blank" class="
+            <a href="https://github.com/EmilyWatkinz" target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
             ">  
             Resume
             </a>
-            <a href="#" class="
+            <a href="#" onclick="toggleModal()" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
