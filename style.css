@@ -674,7 +674,6 @@ SHAPES
 }
 
 
-/* Small phones, tablets, large smart phones */
 @media (max-width: 768px) {
     .title {
         font-size: 80px;
@@ -699,7 +698,7 @@ SHAPES
     }
 }
 
-/* Small Phones */
+
 
 @media (max-width:480px) {
     .title {
