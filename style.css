@@ -83,11 +83,11 @@ input:focus, textarea:focus {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 12px;
+    padding: 0 clamp(12px, 3vw, 24px);
 }
 
 .title {
-    font-size: 120px;
+    font-size: clamp(40px, 12vw, 120px);
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
@@ -211,7 +211,7 @@ LANDING PAGE
 }
 
 .header__para {
-    font-size: 24px;
+    font-size: clamp(16px, 2.5vw, 24px);
     line-height: 2;
     max-width: 450px;
 }
@@ -404,7 +404,7 @@ MODAL
 }
 
 .modal__title {
-   font-size: 26px; 
+   font-size: clamp(20px, 3vw, 26px); 
 }
 
 .modal__sub-title {
@@ -505,12 +505,12 @@ PROJECTS
 
 .section__title {
     text-align: center;
-    font-size: 48px;
-    margin-bottom: 60px;
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: clamp(30px, 5vw, 60px);
 }
 
 .project {
-    margin-bottom: 135px;
+    margin-bottom: clamp(60px, 10vw, 135px);
 }
 
 .project__img {
@@ -543,12 +543,14 @@ PROJECTS
 .project__description {
     position: absolute; 
     top: 50%;
-    left: 90px;
+    left: 5%;
+    right: 5%;
     transform: translateY(100%);
     opacity: 0;
     transition: opacity 300ms, transform 450ms ease;
     color: white;
-    max-width: 550px;
+    max-width: 90%;
+    padding: 0 20px;
 }
 
 .project__wrapper:hover .project__wrapper--bg {
@@ -566,7 +568,7 @@ PROJECTS
 }
 
 .project__description--title {
-    font-size: 40px;
+    font-size: clamp(24px, 4vw, 40px);
 }
 
 .project__description--subtitle {
@@ -675,13 +677,23 @@ SHAPES
 }
 
 
+/* Tablet and below */
 @media (max-width: 768px) {
-    .title {
-        font-size: 80px;
+    nav {
+        padding: 0 12px;
     }
 
-    .header__para {
-        font-size: 20px;
+    .nav__link--list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav__link {
+        margin: 8px;
+    }
+
+    .header {
+        padding: 0 20px;
     }
 
     .modal {
@@ -696,40 +708,178 @@ SHAPES
 
     .modal__half {
         width: 100%;
+        padding: 32px 24px;
+    }
+
+    .modal__language {
+        width: 33.33%;
+        padding: 12px;
+    }
+
+    .project {
+        margin-bottom: 80px;
+    }
+
+    .project__description {
+        left: 0;
+        right: 0;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    .project__description--para {
+        font-size: 14px;
+    }
+
+    .mail__btn {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    footer {
+        padding: 8% 0;
+    }
+
+    .footer__social--list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
     }
 }
 
-
-
-@media (max-width:480px) {
-    .title {
-        font-size: 52px;
+/* Mobile devices */
+@media (max-width: 480px) {
+    p {
+        font-size: 14px;
     }
 
-    .header__para {
-        font-size: 18px
+    nav {
+        height: 80px;
+    }
+
+    #personal-logo {
+        width: 40px;
+        height: 40px;
     }
 
     .nav__link:first-child {
         display: none;
     }
 
-    .project__description--para {
-        display:none;
+    .nav__link--anchor {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 0 16px;
+    }
+
+    .social__list {
+        margin-top: 12px;
+    }
+
+    .social__link {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .scroll__icon {
+        width: 16px;
+        height: 24px;
+    }
+
+    .modal__half {
+        padding: 24px 16px;
+    }
+
+    .modal__language {
+        width: 50%;
+        padding: 8px;
+    }
+
+    .modal__language--img {
+        max-width: 60px;
+    }
+
+    .form__submit {
+        max-width: 100%;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .project {
+        margin-bottom: 60px;
     }
 
     .project__description {
-        left: 0;
-        padding: 0;
-        width: 100%;
-        text-align: center;
+        padding: 0 12px;
+    }
+
+    .project__description--para {
+        display: none;
     }
 
     .project__description--sub-title {
         margin-bottom: 8px;
+        font-size: 12px;
     }
 
-    .modal__half {
-        padding: 40px;
+    .project__description--links {
+        margin-top: 8px;
+    }
+
+    .project_-description--link {
+        font-size: 16px;
+        margin-right: 12px;
+    }
+
+    .mail__btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .footer__logo--img {
+        width: 50px;
+    }
+
+    .footer__social--list {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    .footer__copyright {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 360px) {
+    .container {
+        padding: 30px 0;
+    }
+
+    .header {
+        padding: 0 12px;
+    }
+
+    .modal__language {
+        width: 100%;
+    }
+
+    .project__description--title {
+        font-size: 20px;
+    }
+
+    .shape {
+        display: none;
     }
 } 
