@@ -18,8 +18,8 @@
    })();
 </script>
 </head>
-<body>
-    <section id="landing-page" onmousemove="moveBackground(event)">
+<body onmousemove="moveBackground(event)">
+    <section id="landing-page">
         <nav>
             <figure>
                 <img id="personal-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtU4XprOSYzg14RHj6GDiveOVS7vCrtkUpw&s" alt="">
@@ -71,17 +71,16 @@
                     <a href="https://github.com/EmilyWatkinz" target="_blank" class="social__link click">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="Emily Elizabeth Watkins_Frontend Developer_20260107.docx" target="_blank" class="social__link click">
+                    <a href="./assets/Real Emily Frontend Resume.docx" target="_blank" class="social__link click">
                         <i class="fa-regular fa-file-pdf"></i>
                     </a>
                 </div>
             </div>
         </header>
-        <a href="#">
-        <button class="mail__btn click" onclick="toggleModal()">
-            <i class="fa-regular fa-envelope"></i>
-        </button>
-        </a>
+    </section>
+    <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fa-regular fa-envelope"></i>
+    </button>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -156,14 +155,23 @@
         <img src="./assets/circle.svg" class="shape shape--7">
         <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
+    <section id="fun-stuff">
+        <div class="container">
+            <div class="row">
+                    <h1 class="section__title fade-up">
+                        Here is some <span class="pink">fun stuff</span> I've been working on
+                    </h1>
+            </div>
+        </div>
+    </section>
     <section id="projects">
         <div class="container">
             <div class="row">
-                <h1 class="section__title">
-                    Here are some of my <span class="pink">projects.</span>
-                </h1>
+                    <h1 class="section__title fade-up">
+                        Here are some of my <span class="pink">projects.</span>
+                    </h1>
                 <ul class="project__list">
-                    <li class="project">
+                        <li class="project fade-up">
                         <div class="project__wrapper">
                             <img src="./assets/Screenshot (37).png" class="project__img">
                             <div class="project__wrapper--bg"></div>
@@ -178,13 +186,17 @@
                                     This project was a virtual internship that I completed with Frontend Simplified. I hit a backend API and used React to create a dynamic frontend. I also implemented a skeleton loading state and lazy loaded images to make the user experience better. 
                                 </p>
                                 <div class="project__description--links">
+                                    <a href="https://github.com/EmilyWatkinz/fs-internship-project" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
                                     <a href="https://emily-internship.vercel.app/" target="blank" class="project__description--link">
-                                         <i class="fa-brands fa-github"></i>
+                                         <i class="fa-solid fa-link"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </li>
+                        <!-- Add fade-up class to other project cards as needed -->
                     <li class="project">
                         <div class="project__wrapper">
                             <img src="./assets/Screenshot (36).png" class="project__img">
@@ -200,9 +212,11 @@
                                     This project was a lot of fun to build! It is a mock library page that I created using HTML,CSS, Javascript, and React. It is completely dynamic - you can add books to your cart, remove them, and even "check out"!
                                 </p>
                                 <div class="project__description--links">
-                                    <a href="https://my-responsive-library-page.vercel.app/" target="blank" class="project__description--link">
-                                         <i class="fa-brands fa-github"></i>
+                                    <a href="https://github.com/EmilyWatkinz/My-Responsive-Library-Page" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
                                     </a>
+                                    <a href="https://my-responsive-library-page.vercel.app/" target="blank" class="project__description--link">
+                                         <i class="fa-solid fa-link"></i>
                                     </a>
                                 </div>
                             </div>
@@ -223,8 +237,11 @@
                                     This fun project was made using Html, CSS, Javascript, and React. I made a dummy "NOTflix" page using an API from OMDB. You can actually search for movies using key words and everything! Give it a try.
                                 </p>
                                 <div class="project__description--links">
+                                    <a href="https://github.com/EmilyWatkinz/Notflix-Final-React-Project" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
                                     <a href="https://notflix-final-react-project.vercel.app/" target="blank" class="project__description--link">
-                                         <i class="fa-brands fa-github"></i>
+                                         <i class="fa-solid fa-link"></i>
                                     </a>
                                 </div>
                             </div>
@@ -244,8 +261,61 @@
                                 <p class="project__description--para"> 
                                     This project was made using Html, CSS, Javascript, and React. I made a "Patient Care" web app using a backend API. I then used React to make the frontend dynamic. I included a skeleton loading state, lazy loaded images, and made each patient and their information completely accessible. </p>
                                 <div class="project__description--links">
+                                    <a href="https://github.com/EmilyWatkinz/Patient-Care-Site" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
                                     <a href="https://patient-care-site.vercel.app/" target="blank" class="project__description--link">
-                                         <i class="fa-brands fa-github"></i>
+                                         <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/Kuna Page.png" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Kuna Idaho Page
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS, Javascript
+                                </h4>
+                                <p class="project__description--para">
+                                    I was appointed Marketing Director for Lamm & Co, an accounting company with over six locations across Idaho. I created this vision board website to showcase my creative ideas and marketing strategy for modernizing their brand. The page demonstrates how I envisioned transforming their digital presence with clean design and engaging user interactions.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/EmilyWatkinz/Kuna-Idaho-Page" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://kuna-idaho-page.vercel.app/" target="_blank" class="project__description--link">
+                                         <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/Skinstric.png" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Skinstric Internship Project
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS, Javascript, React
+                                </h4>
+                                <p class="project__description--para">
+                                    This project was an exciting internship where I built a fully functional skincare e-commerce platform. I implemented a multi-step quiz form to help users find their perfect products, created dynamic displays, and focused on delivering a smooth, intuitive shopping experience using React.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/EmilyWatkinz/skinstric-internship-project" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://skinstric-internship-project.vercel.app/next-step" target="_blank" class="project__description--link">
+                                         <i class="fa-solid fa-link"></i>
                                     </a>
                                 </div>
                             </div>
@@ -276,7 +346,7 @@
             ">  
             LinkedIn
             </a>
-            <a href="Emily Elizabeth Watkins_Frontend Developer_20260107.docx" target="_blank" class="
+            <a href="./assets/Real Emily Frontend Resume.docx" target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white

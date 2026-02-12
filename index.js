@@ -55,3 +55,19 @@ function toggleModal() {
     isModalOpen = true;
     document.body.classList += ' modal--open';
 }
+
+
+// Scroll-triggered fade-up animation
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+    fadeEls.forEach(el => observer.observe(el));
+});
