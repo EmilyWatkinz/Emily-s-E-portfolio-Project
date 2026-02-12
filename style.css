@@ -1,3 +1,36 @@
+@media (max-width: 768px) {
+    .spiral-canvas-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #spiral-canvas {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        margin: 0 !important;
+    }
+}
+# Responsive: Center spiral and fit on small screens
+@media (max-width: 768px) {
+    #spiral-canvas {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100%;
+        max-height: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
 
 .spiral-loader-container {
     display: flex;
@@ -195,18 +228,28 @@ li {
 p {
     line-height: 1.5;
 
-.spiral-canvas-container {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 100%;
-     height: 100%;
+
+#.spiral-canvas-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 #spiral-canvas {
-     width: 200px;
-     height: 200px;
-     background: transparent;
-     display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140% !important;
+    height: 140% !important;
+    max-width: 140%;
+    max-height: 140%;
+    display: block;
+    background: transparent;
+    margin: 0;
+    z-index: 1;
 }
     font-size: 16px;
 }
@@ -369,6 +412,70 @@ nav,
 {
     color: white;
 
+}
+
+/* DARK MODE: backgrounds and fun animations section */
+.dark__theme body,
+.dark__theme section,
+.dark__theme #landing-page {
+    background-color: #181818 !important;
+    color: #fff;
+}
+.dark__theme .container {
+    background: transparent;
+}
+.dark__theme .fun-squares-container {
+    background: transparent;
+}
+.dark__theme .fun-square,
+.dark__theme .fun-square--smiley,
+.dark__theme .fun-square--clock,
+.dark__theme .fun-square--loading,
+.dark__theme .fun-square--ball {
+    background: #2a0036 !important;
+    box-shadow: 0 4px 24px 0 rgba(239, 10, 174, 0.25);
+}
+.dark__theme .fun-square--loading {
+    background: #111 !important;
+}
+.dark__theme .fun-square--clock {
+    background: #2a0036 !important;
+}
+.dark__theme .smiley-face {
+    background: transparent;
+}
+.dark__theme .clock-container,
+.dark__theme .spiral-canvas-container {
+    background: transparent;
+}
+.dark__theme .section__title,
+.dark__theme .project__description--title,
+.dark__theme .project__description--sub-title {
+    color: #fff !important;
+}
+.dark__theme .pink {
+    color: #ff4fcf !important;
+}
+.dark__theme .modal__about {
+    background-color: #222 !important;
+    color: #fff;
+}
+.dark__theme .modal__contact {
+    background-color: #181818 !important;
+    color: #fff;
+}
+.dark__theme nav {
+    background: #181818 !important;
+}
+.dark__theme .nav__link--anchor {
+    color: #fff !important;
+}
+.dark__theme .project__wrapper--bg {
+    background-color: #111 !important;
+}
+.dark__theme footer {
+    background: #181818 !important;
+    color: #fff;
 }
 
 .dark__theme #personal-logo {
@@ -912,13 +1019,21 @@ SHAPES
 
 /* Tablet and below */
 @media (max-width: 768px) {
-    nav {
-        padding: 0 12px;
+    .smiley-face,
+    .bouncing-ball-svg,
+    #clock-canvas {
+        width: 60px !important;
+        height: 60px !important;
     }
-
-    .nav__link--list {
-        flex-wrap: wrap;
-        justify-content: center;
+    .spiral-canvas-container {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* Remove duplicate #spiral-canvas rules in media queries to avoid conflicts */
     }
 
     .nav__link {
@@ -980,6 +1095,45 @@ SHAPES
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
+    }
+
+    /* Responsive fun animations section */
+        .fun-squares-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 64px auto 0 auto;
+            max-width: 700px;
+        }
+        @media (max-width: 768px) {
+            .fun-squares-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                gap: 16px;
+                max-width: 340px;
+            }
+            .fun-square {
+                width: 100%;
+                height: 180px;
+                min-width: 0;
+                min-height: 0;
+            }
+        }
+    .smiley-face,
+    .bouncing-ball-svg,
+    #clock-canvas {
+        width: 90px !important;
+        height: 90px !important;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .clock-container,
+    .spiral-canvas-container {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -1091,6 +1245,23 @@ SHAPES
         font-size: 12px;
         text-align: center;
     }
+
+    /* Extra small screens: fun animations section */
+    .fun-squares-container {
+        max-width: 98vw;
+        gap: 10px;
+    }
+    .fun-square {
+        height: 120px;
+        border-radius: 12px;
+    }
+    .smiley-face,
+    .bouncing-ball-svg,
+    #clock-canvas {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
 }
 
 
@@ -1109,6 +1280,17 @@ SHAPES
 
     .project__description--title {
         font-size: 20px;
+    }
+    /* Tiny screens: fun animations section */
+    .fun-square {
+        height: 90px;
+        border-radius: 8px;
+    }
+    .smiley-face,
+    .bouncing-ball-svg,
+    #clock-canvas {
+        width: 40px !important;
+        height: 40px !important;
     }
 } 
 

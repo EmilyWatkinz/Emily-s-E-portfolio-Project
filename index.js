@@ -116,21 +116,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.getElementById('spiral-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    const w = canvas.width;
-    const h = canvas.height;
-    const cx = w / 2;
-    const cy = h / 2;
-    const spiralLength = 16 * Math.PI; 
-    const dotSpacing = 0.22; 
-    const baseRadius = 12;
-    const spiralStep = 5.5; 
-    const dotRadius = 7;
+    function resizeCanvas() {
+        const parent = canvas.parentElement;
+        if (parent) {
+            const size = Math.max(parent.offsetWidth, parent.offsetHeight);
+            canvas.width = size;
+            canvas.height = size;
+        }
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
     let angleOffset = 0;
-
     function drawSpiral() {
+        const w = canvas.width;
+        const h = canvas.height;
+        const cx = w / 2;
+        const cy = h / 2;
+        const spiralLength = 16 * Math.PI;
+        const dotSpacing = 0.22;
+        const baseRadius = 12;
+        const spiralStep = 5.5;
+        const dotRadius = 7;
         ctx.clearRect(0, 0, w, h);
         let theta = 0;
-        let i = 0;
         while (theta < spiralLength) {
             const r = baseRadius + spiralStep * theta;
             const a = theta + angleOffset;
@@ -146,12 +154,10 @@ document.addEventListener('DOMContentLoaded', function () {
             ctx.fill();
             ctx.restore();
             theta += dotSpacing;
-            i++;
         }
     }
-
     function animate() {
-        angleOffset += 0.008; 
+        angleOffset += 0.008;
         drawSpiral();
         requestAnimationFrame(animate);
     }
