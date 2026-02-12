@@ -73,7 +73,7 @@
 }
 
 .fun-square--loading {
-    background: #111;
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,6 +102,7 @@
 .fun-square--ball {
     position: relative;
     overflow: hidden;
+    background: #000;
 }
 .bouncing-ball-container {
     position: absolute;
@@ -154,7 +155,7 @@
 .fun-square {
     width: 240px;
     height: 240px;
-    background: rgb(239, 10, 174);
+    background: #000;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -166,7 +167,7 @@
 
 
 .fun-square--clock {
-    background: rgb(239, 10, 174);
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,7 +186,7 @@
 }
 
 .fun-square--smiley {
-    background: rgb(239, 10, 174);
+    background: #000;
 }
 
 .smiley-face {
@@ -432,19 +433,16 @@ nav,
     background: transparent;
 }
 .dark__theme .fun-square,
-.dark__theme .fun-square--smiley,
-.dark__theme .fun-square--clock,
-.dark__theme .fun-square--loading,
-.dark__theme .fun-square--ball {
-    background: #2a0036 !important;
-    box-shadow: 0 4px 24px 0 rgba(239, 10, 174, 0.25);
-}
-.dark__theme .fun-square--loading {
-    background: #111 !important;
-}
-.dark__theme .fun-square--clock {
-    background: #2a0036 !important;
-}
+    .dark__theme .fun-square,
+    .dark__theme .fun-square,
+    .dark__theme .fun-square--smiley,
+    .dark__theme .fun-square--clock,
+    .dark__theme .fun-square--loading,
+    .dark__theme .fun-square--ball {
+        background: #f5f5f5;
+        box-shadow: 0 4px 24px 0 rgba(239, 10, 174, 0.25);
+    }
+
 .dark__theme .smiley-face {
     background: transparent;
 }
@@ -455,30 +453,30 @@ nav,
 .dark__theme .section__title,
 .dark__theme .project__description--title,
 .dark__theme .project__description--sub-title {
-    color: #fff !important;
+    color: #fff;
 }
 .dark__theme .pink {
-    color: #ff4fcf !important;
+    color: #ff4fcf;
 }
 .dark__theme .modal__about {
-    background-color: #222 !important;
+    background-color: #222;
     color: #fff;
 }
 .dark__theme .modal__contact {
-    background-color: #181818 !important;
+    background-color: #181818;
     color: #fff;
 }
 .dark__theme nav {
-    background: #181818 !important;
+    background: #181818;
 }
 .dark__theme .nav__link--anchor {
-    color: #fff !important;
+    color: #fff;
 }
 .dark__theme .project__wrapper--bg {
-    background-color: #111 !important;
+    background-color: #111;
 }
 .dark__theme footer {
-    background: #181818 !important;
+    background: #181818;
     color: #fff;
 }
 
@@ -1125,8 +1123,8 @@ footer {
     
         .smiley-face,
     .bouncing-ball-svg {
-        width: 90px !important;
-        height: 90px !important;
+        width: 90px ;
+        height: 90px;
         max-width: 100%;
         max-height: 100%;
     }
