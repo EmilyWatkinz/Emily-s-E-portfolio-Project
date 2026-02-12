@@ -1,3 +1,164 @@
+
+.spiral-loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.spiral-loader {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    animation: spiral-rotate 1.6s linear infinite;
+}
+.spiral-loader .dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background: #00ff6a;
+    border-radius: 50%;
+    box-shadow: 0 0 16px 4px #00ff6a99;
+    transform: rotate(calc(45deg * var(--i))) translate(0, -28px) scale(1);
+    animation: dot-pulse 1.6s cubic-bezier(.6,0,.4,1) infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+@keyframes spiral-rotate {
+    100% { transform: rotate(360deg); }
+}
+@keyframes dot-pulse {
+    0%, 100% { opacity: 0.5; transform: rotate(var(--angle)) translate(0, -28px) scale(0.7); }
+    30% { opacity: 1; transform: rotate(var(--angle)) translate(0, -32px) scale(1.2); }
+    60% { opacity: 0.7; transform: rotate(var(--angle)) translate(0, -28px) scale(1); }
+}
+
+.fun-square--loading {
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glow-loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.glow-loader {
+    width: 64px;
+    height: 64px;
+    border: 6px solid rgba(0, 212, 255, 0.2);
+    border-top: 6px solid #00d4ff;
+    border-radius: 50%;
+    animation: glow-spin 1.2s linear infinite;
+    box-shadow: 0 0 24px 6px #00d4ff, 0 0 60px 12px #00d4ff33;
+}
+@keyframes glow-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Bouncing Ball Styles */
+.fun-square--ball {
+    position: relative;
+    overflow: hidden;
+}
+.bouncing-ball-container {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+/* Add squash effect on impact */
+.bouncing-ball {
+    animation: bounce-ball 1.6s cubic-bezier(.5,0,.5,1) infinite;
+    will-change: transform;
+    display: block;
+    transform-origin: 50% 100%;
+}
+@keyframes bounce-ball {
+    0%   { transform: translateY(0) scaleY(1) scaleX(1); }
+    5%   { transform: translateY(4px) scaleY(0.85) scaleX(1.15); }
+    10%  { transform: translateY(0) scaleY(1) scaleX(1); }
+    20%  { transform: translateY(-60px) scaleY(1.05) scaleX(0.95); }
+    30%  { transform: translateY(-60px) scaleY(1.05) scaleX(0.95); }
+    40%  { transform: translateY(0) scaleY(1) scaleX(1); }
+    45%  { transform: translateY(4px) scaleY(0.85) scaleX(1.15); }
+    50%  { transform: translateY(0) scaleY(1) scaleX(1); }
+    60%  { transform: translateY(-60px) scaleY(1.05) scaleX(0.95); }
+    70%  { transform: translateY(-60px) scaleY(1.05) scaleX(0.95); }
+    80%  { transform: translateY(0) scaleY(1) scaleX(1); }
+    85%  { transform: translateY(4px) scaleY(0.85) scaleX(1.15); }
+    90%  { transform: translateY(0) scaleY(1) scaleX(1); }
+    100% { transform: translateY(0) scaleY(1) scaleX(1); }
+}
+
+.fun-squares-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 64px auto 0 auto;
+    max-width: 700px;
+}
+
+
+
+.fun-square {
+    width: 240px;
+    height: 240px;
+    background: rgb(239, 10, 174);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 24px 0 rgba(239, 10, 174, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.fun-square--clock {
+    background: rgb(239, 10, 174);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#clock-canvas {
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    display: block;
+}
+
+.fun-square--smiley {
+    background: rgb(239, 10, 174);
+}
+
+.smiley-face {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .fade-up {
     opacity: 0;
     transform: translateY(60px);
@@ -33,6 +194,20 @@ li {
 
 p {
     line-height: 1.5;
+
+.spiral-canvas-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+}
+#spiral-canvas {
+     width: 200px;
+     height: 200px;
+     background: transparent;
+     display: block;
+}
     font-size: 16px;
 }
 
@@ -44,7 +219,6 @@ section {
     background-color: rgb(245, 245, 245);
     transition: all 300ms ease;
     position: relative;
-    z-index: 1;
 }
 
 .mail__btn {
@@ -225,7 +399,6 @@ LANDING PAGE
     min-height: 100vh;
     background-color: rgb(245, 245, 245);
     position: relative;
-    z-index: 1;
 }
 
 .header {
@@ -297,7 +470,7 @@ LANDING PAGE
     right: 40px;
     z-index: 9999 !important;
 }
-/* Ensure mail__btn stays fixed and above all content */
+
 .mail__btn {
     position: fixed !important;
     z-index: 1000 !important;
@@ -351,11 +524,7 @@ LANDING PAGE
     }
 }
 
-/*
 
-NAVIGATION 
-
-*/
 
 nav {
     display: flex;
@@ -565,11 +734,7 @@ MODAL
     z-index: 100;
 }
 
-/*
 
-PROJECTS
-
-*/
 
 .section__title {
     text-align: center;
@@ -655,11 +820,7 @@ PROJECTS
     margin: 16px 0;
 }
 
-/*
 
-FOOTER 
-
-*/
 
 footer {
     position: relative;
@@ -700,7 +861,7 @@ SHAPES
 
 .shape {
     position: fixed;
-    z-index: -1;
+    z-index: 0;
 }
 
 .shape--0 {
@@ -822,7 +983,6 @@ SHAPES
     }
 }
 
-/* Mobile devices */
 @media (max-width: 480px) {
     p {
         font-size: 14px;
@@ -933,7 +1093,7 @@ SHAPES
     }
 }
 
-/* Very small mobile devices */
+
 @media (max-width: 360px) {
     .container {
         padding: 30px 0;
@@ -952,8 +1112,6 @@ SHAPES
     }
 } 
 
-
-/* Fade-up animation for scroll */
 .fade-up {
     opacity: 0;
     transform: translateY(40px);

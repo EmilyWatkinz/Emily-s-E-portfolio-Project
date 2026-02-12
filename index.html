@@ -145,22 +145,68 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/semi circle.svg" class="shape shape--0">
-        <img src="./assets/circle.svg" class="shape shape--1">
-        <img src="./assets/squiggly.svg" class="shape shape--2">
-        <img src="./assets/circle.svg" class="shape shape--3">
-        <img src="./assets/triangle.svg" class="shape shape--4">
-        <img src="./assets/circle.svg" class="shape shape--5">
-        <img src="./assets/squiggly.svg" class="shape shape--6">
-        <img src="./assets/circle.svg" class="shape shape--7">
-        <img src="./assets/semi circle.svg" class="shape shape--8">
+    </section>
+    <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="fun-stuff">
         <div class="container">
             <div class="row">
-                    <h1 class="section__title fade-up">
-                        Here is some <span class="pink">fun stuff</span> I've been working on
-                    </h1>
+                <h1 class="section__title fade-up">
+                    Here's some <span class="pink">fun animations</span> I've done
+                </h1>
+                <div class="fun-squares-container">
+                    <div class="fun-square fun-square--smiley">
+                        <div class="smiley-face">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="55" fill="#FFD600" stroke="#E6B800" stroke-width="6"/>
+                                                                <g class="eye-group left-eye-group">
+                                                                    <circle class="eye-white left-eye-white" cx="42" cy="55" r="12" fill="#fff"/>
+                                                                    <circle class="eye-pupil left-eye-pupil" cx="42" cy="55" r="6" fill="#222"/>
+                                                                </g>
+                                                                <g class="eye-group right-eye-group">
+                                                                    <circle class="eye-white right-eye-white" cx="78" cy="55" r="12" fill="#fff"/>
+                                                                    <circle class="eye-pupil right-eye-pupil" cx="78" cy="55" r="6" fill="#222"/>
+                                                                </g>
+                                <path class="smile-mouth" d="M48 78 Q60 105 72 78 Q60 95 48 78 Z" stroke="#222" stroke-width="4" fill="#fff"/>
+                                <circle class="o-mouth" cx="60" cy="90" r="9" stroke="#222" stroke-width="4" fill="#fff" style="display:none;"/>
+                                <rect class="mouth-hitbox" x="45" y="78" width="30" height="22" fill="transparent" style="cursor:pointer;"/>
+                            </svg>
+                        </div>
+                    </div>
+                                        <div class="fun-square fun-square--ball">
+                                                <div class="bouncing-ball-container">
+                                                        <svg class="bouncing-ball" width="80" height="80" viewBox="0 0 80 80">
+                                                                <defs>
+                                                                    <radialGradient id="ballGradient" cx="60%" cy="35%" r="60%">
+                                                                        <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+                                                                        <stop offset="60%" stop-color="#4fc3f7"/>
+                                                                        <stop offset="100%" stop-color="#01579b"/>
+                                                                    </radialGradient>
+                                                                </defs>
+                                                                <ellipse cx="40" cy="40" rx="32" ry="32" fill="url(#ballGradient)"/>
+                                                                <ellipse cx="40" cy="65" rx="20" ry="6" fill="#000" opacity="0.15"/>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                    <div class="fun-square fun-square--loading">
+                        <div class="spiral-canvas-container">
+                            <canvas id="spiral-canvas" width="220" height="220"></canvas>
+                        </div>
+                    </div>
+                    <div class="fun-square fun-square--clock">
+                        <div class="clock-container">
+                            <canvas id="clock-canvas" width="180" height="180"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
