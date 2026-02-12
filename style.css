@@ -24,7 +24,7 @@
         margin: 0 !important;
     }
 }
-# Responsive: Center spiral and fit on small screens
+
 @media (max-width: 768px) {
     #spiral-canvas {
         width: 100% !important;
@@ -98,7 +98,7 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-/* Bouncing Ball Styles */
+
 .fun-square--ball {
     position: relative;
     overflow: hidden;
@@ -179,8 +179,7 @@
     height: 100%;
 }
 #clock-canvas {
-    width: 220px;
-    height: 220px;
+    height: 225px;
     background: transparent;
     display: block;
 }
@@ -234,7 +233,7 @@ p {
     line-height: 1.5;
 
 
-#.spiral-canvas-container {
+.spiral-canvas-container {
     width: 100%;
     height: 100%;
     position: relative;
@@ -419,7 +418,7 @@ nav,
 
 }
 
-/* DARK MODE: backgrounds and fun animations section */
+
 .dark__theme body,
 .dark__theme section,
 .dark__theme #landing-page {
@@ -501,11 +500,7 @@ nav,
     color: #242424;
 }
 
-/*
 
-LANDING PAGE 
-
-*/
 
 #landing-page {
     min-height: 100vh;
@@ -669,11 +664,7 @@ nav {
     font-size: 20px;
 }
 
-/*
 
-MODAL
-
-*/
 
 .modal {
     position: absolute;
@@ -965,11 +956,7 @@ footer {
     color: white;
 }
 
-/*
 
-SHAPES 
-
-*/  
 
 .shape {
     position: fixed;
@@ -1022,13 +1009,13 @@ SHAPES
 }
 
 
-/* Tablet and below */
+
 @media (max-width: 768px) {
     .smiley-face,
     .bouncing-ball-svg,
     #clock-canvas {
-        width: 60px !important;
-        height: 60px !important;
+        width: 60px;
+        height: 60px;
     }
     .spiral-canvas-container {
         width: 100% !important;
@@ -1038,7 +1025,7 @@ SHAPES
         padding: 0;
         box-sizing: border-box;
     }
-    /* Remove duplicate #spiral-canvas rules in media queries to avoid conflicts */
+   
     }
 
     .nav__link {
@@ -1102,7 +1089,7 @@ SHAPES
         gap: 16px;
     }
 
-    /* Responsive fun animations section */
+    
         .fun-squares-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1126,21 +1113,28 @@ SHAPES
                 min-width: 0;
                 min-height: 0;
             }
+
+            #clock-canvas {
+                width: 100%;
+                height: 180px;
+            }
         }
-    .smiley-face,
-    .bouncing-ball-svg,
-    #clock-canvas {
+    
+    
+        .smiley-face,
+    .bouncing-ball-svg {
         width: 90px !important;
         height: 90px !important;
         max-width: 100%;
         max-height: 100%;
     }
+
     .clock-container,
     .spiral-canvas-container {
         width: 100%;
         height: 100%;
     }
-}
+
 
 @media (max-width: 480px) {
     p {
@@ -1251,7 +1245,7 @@ SHAPES
         text-align: center;
     }
 
-    /* Extra small screens: fun animations section */
+    
     .fun-squares-container {
         max-width: 98vw;
         gap: 10px;
@@ -1261,11 +1255,12 @@ SHAPES
         border-radius: 12px;
     }
     .smiley-face,
-    .bouncing-ball-svg,
-    #clock-canvas {
+    .bouncing-ball-svg
+    {
         width: 60px !important;
         height: 60px !important;
     }
+
 
 }
 
@@ -1286,16 +1281,15 @@ SHAPES
     .project__description--title {
         font-size: 20px;
     }
-    /* Tiny screens: fun animations section */
+   
     .fun-square {
         height: 90px;
         border-radius: 8px;
     }
     .smiley-face,
-    .bouncing-ball-svg,
-    #clock-canvas {
-        width: 40px !important;
-        height: 40px !important;
+    .bouncing-ball-svg {
+        width: 40px;
+        height: 40px;
     }
 } 
 
