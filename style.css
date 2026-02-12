@@ -1,3 +1,8 @@
+.smile-mouth,
+.o-mouth {
+    transition: opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
 @media (max-width: 768px) {
     .spiral-canvas-container {
         display: flex !important;
@@ -174,8 +179,8 @@
     height: 100%;
 }
 #clock-canvas {
-    width: 160px;
-    height: 160px;
+    width: 220px;
+    height: 220px;
     background: transparent;
     display: block;
 }

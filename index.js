@@ -212,13 +212,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (mouthHitbox) {
         mouthHitbox.addEventListener('mouseenter', function () {
-            smileMouth.style.display = 'none';
-            oMouth.style.display = '';
+            smileMouth.style.opacity = 0;
+            oMouth.style.opacity = 1;
         });
         mouthHitbox.addEventListener('mouseleave', function () {
-            smileMouth.style.display = '';
-            oMouth.style.display = 'none';
+            smileMouth.style.opacity = 1;
+            oMouth.style.opacity = 0;
         });
+        // Set initial state
+        smileMouth.style.opacity = 1;
+        oMouth.style.opacity = 0;
     }
 });
 let isModalOpen = false;
