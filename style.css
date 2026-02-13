@@ -1,3 +1,70 @@
+@media (max-width: 700px) {
+    .project__wrapper {
+        padding: 50px 10px 24px 10px;
+    }
+    .project__description {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .project__list {
+        padding-right: 40px;
+    }
+
+    .fun-square--ball {
+        padding-right: 50px;
+    }
+
+    .fun-square--clock {
+        padding-right: 50px;
+}
+}
+
+@media (max-width: 430px) {
+    .project__wrapper {
+        padding: 18px 4px 50px 4px;
+    }
+    .project__description {
+        padding: 14px 2px 14px 2px;
+    }
+}
+/* Coffee cup animation for Extra Square 1 */
+.coffee-cup-anim {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coffee-cup-anim svg {
+    width: 160px;
+    height: 160px;
+    display: block;
+}
+.cup-move {
+    animation: cup-bob 2s ease-in-out infinite;
+}
+@keyframes cup-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+.steam {
+    opacity: 0.7;
+    animation: steam-rise 4s linear infinite;
+}
+@keyframes steam-rise {
+    0% { opacity: 0.7; transform: translateY(0) scaleX(1); }
+    100% { opacity: 0; transform: translateY(-60px) scaleX(1.15); }
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+.smile-mouth,
+.o-mouth {
+    transition: opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+body, html {
+    font-family: 'Roboto', Arial, sans-serif;
+}
 .smile-mouth,
 .o-mouth {
     transition: opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1);
@@ -5,35 +72,23 @@
 }
 @media (max-width: 768px) {
     .spiral-canvas-container {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        position: relative !important;
-        width: 100% !important;
-        height: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
     #spiral-canvas {
-        position: absolute !important;
-        left: 50% !important;
-        top: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-        margin: 0 !important;
-    }
-}
-
-@media (max-width: 768px) {
-    #spiral-canvas {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100%;
-        max-height: 100%;
+        position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
     }
 }
 
@@ -140,22 +195,22 @@
 }
 
 .fun-squares-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     justify-content: center;
     align-items: center;
     margin: 64px auto 0 auto;
-    max-width: 700px;
+    max-width: 900px;
 }
+
 
 
 
 .fun-square {
     width: 240px;
     height: 240px;
-    background: #000;
+    background: gray;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -163,11 +218,79 @@
     box-shadow: 0 4px 24px 0 rgba(239, 10, 174, 0.15);
     position: relative;
     overflow: hidden;
+    transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fun-square:hover {
+    transform: scale(1.06) translateY(-6px);
+    box-shadow: 0 12px 36px 0 rgba(239, 10, 174, 0.22);
 }
 
 
+
+
+
+
+@media (max-width: 900px) {
+    /* removed grid-template-columns and grid-auto-rows from .fun-squares-container in media queries */
+}
+@media (max-width: 600px) {
+    /* removed grid-template-columns and grid-auto-rows from .fun-squares-container in media queries */
+}
+
+.fun-square--extra1 {
+    background: #fcc7c7;
+    color: #222;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fun-square--extra2 {
+    background: #a0f6a0;
+    color: #222;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart-anim {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pumping-heart {
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+.heart-shape {
+    transform-origin: 80px 100px;
+    animation: heart-pump 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.heart-outline {
+    transform-origin: 80px 100px;
+    animation: heart-pump 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes heart-pump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+    100% { transform: scale(1); }
+}
+
+
+.fun-square--ball {
+    background: rgb(234, 234, 101)
+}
+
+.fun-square--loading {
+    background-color: rgb(133, 133, 238);
+}
 .fun-square--clock {
-    background: #000;
+    background: gray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,35 +309,45 @@
 }
 
 .fun-square--smiley {
-    background: #000;
+    background: rgb(229, 103, 103);
 }
 
-.smiley-face {
-    width: 120px;
-    height: 120px;
-    margin: auto;
+
+.fun-squares-row {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    gap: 24px;
     justify-content: center;
-}
-.fade-up {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: opacity 1.5s cubic-bezier(0.23, 1, 0.32, 1), transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    align-items: center;
+
+
+
+@media (max-width: 700px) {
+    .project__list {
+        padding-right: 24px;
+    }
 }
 
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 430px) {
+    .project__list {
+        padding-right: 12px;
+    }
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+@media (max-width: 700px) {
+    .fun-squares-row {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .fun-square {
+        flex: 1 1 45%;
+        max-width: 48%;
+        min-width: 160px;
+        margin: 0 auto;
+    }
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -234,7 +367,7 @@ p {
     line-height: 1.5;
 
 
-.spiral-canvas-container {
+.spiral-canvas--container {
     width: 100%;
     height: 100%;
     position: relative;
@@ -242,13 +375,14 @@ p {
     padding: 0;
     box-sizing: border-box;
 }
+
 #spiral-canvas {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 140% !important;
-    height: 140% !important;
+    width: 140% ;
+    height: 140% ;
     max-width: 140%;
     max-height: 140%;
     display: block;
@@ -345,7 +479,7 @@ input:focus, textarea:focus {
 }
 
 .pink {
-    color: rgb(239, 10, 174) !important;
+    color: rgb(239, 10, 174) ;
 }
 
 button {
@@ -423,7 +557,7 @@ nav,
 .dark__theme body,
 .dark__theme section,
 .dark__theme #landing-page {
-    background-color: #181818 !important;
+    background-color: #181818 ;
     color: #fff;
 }
 .dark__theme .container {
@@ -535,19 +669,19 @@ nav,
 }
 
 .social__link {
-    background-color:rgb(239, 10, 174);
-    color: white;
-    padding: 6px;
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
-    margin-right: 12px;
-    display: flex;
-    justify-content: center;
+    color: #242424;
+    padding: 0 8px;
+    font-size: 2rem;
+    background: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    display: inline-flex;
     align-items: center;
-    border-radius: 50%;
-    opacity: 0;
-    animation: float-up 1s ease-out forwards;
+    justify-content: center;
+    box-shadow: none;
+    position: static;
+    overflow: visible;
 }
 
 .social__link:nth-child(1) {
@@ -570,15 +704,15 @@ nav,
         border: 5px solid white;
     background-color: #242424;
     color: white;
-    position: fixed !important;
+    position: fixed ;
     bottom: 32px;
     right: 40px;
-    z-index: 9999 !important;
+    z-index: 9999 ;
 }
 
 .mail__btn {
-    position: fixed !important;
-    z-index: 1000 !important;
+    position: fixed ;
+    z-index: 1000 ;
 }
 
 .scroll {
@@ -1009,15 +1143,17 @@ footer {
 
 
 @media (max-width: 768px) {
-    .smiley-face,
-    .bouncing-ball-svg,
-    #clock-canvas {
+    
+    .bouncing-ball-svg {
         width: 60px;
         height: 60px;
+        display: block;
+        margin: 0 auto;
     }
+
     .spiral-canvas-container {
-        width: 100% !important;
-        height: 100% !important;
+        width: 100% ;
+        height: 100% ;
         position: relative;
         margin: 0;
         padding: 0;
@@ -1088,52 +1224,6 @@ footer {
     }
 
     
-        .fun-squares-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-            margin: 64px auto 0 auto;
-            max-width: 700px;
-        }
-        @media (max-width: 768px) {
-            .fun-squares-container {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(4, 1fr);
-                gap: 16px;
-                max-width: 340px;
-            }
-            .fun-square {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 400px;
-                width: 400px;
-            }
-
-            #clock-canvas {
-                width: 200%;
-                height: 180px;
-            }
-        }
-    
-    
-        .smiley-face,
-    .bouncing-ball-svg {
-        width: 90px ;
-        height: 90px;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .clock-container,
-    .spiral-canvas-container {
-        width: 100%;
-        height: 100%;
-    }
 
 
 @media (max-width: 480px) {
@@ -1258,8 +1348,8 @@ footer {
     .smiley-face,
     .bouncing-ball-svg
     {
-        width: 60px !important;
-        height: 60px !important;
+        width: 60px ;
+        height: 60px ;
     }
 
 
@@ -1291,6 +1381,8 @@ footer {
     .bouncing-ball-svg {
         width: 40px;
         height: 40px;
+        display: block;
+        margin: 0 auto;
     }
 } 
 

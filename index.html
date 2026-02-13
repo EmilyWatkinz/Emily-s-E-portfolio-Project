@@ -65,13 +65,13 @@
                     Here's a bit more <b class="pink click" onclick="toggleModal()">about me.</b>
                 </p>
                 <div class="social__list">
-                    <a href="https://www.linkedin.com/in/emily-elizabeth-watkins-a8750138b/" target="blank_" class="social__link click">
+                    <a href="https://www.linkedin.com/in/emily-elizabeth-watkins-a8750138b/" target="_blank" class="social__link click">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                     <a href="https://github.com/EmilyWatkinz" target="_blank" class="social__link click">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="./assets/Real Emily Frontend Resume.docx" target="_blank" class="social__link click">
+                    <a href="./assets/EmilyWatkinsResume.pdf" target="_blank" class="social__link click">
                         <i class="fa-regular fa-file-pdf"></i>
                     </a>
                 </div>
@@ -163,50 +163,95 @@
                     Here's some <span class="pink">fun animations</span> I've done
                 </h1>
                 <div class="fun-squares-container">
-                    <div class="fun-square fun-square--smiley">
-                        <div class="smiley-face">
-                            <svg width="120" height="120" viewBox="0 0 120 120">
-                                <circle cx="60" cy="60" r="55" fill="#FFD600" stroke="#E6B800" stroke-width="6"/>
-                                                                <g class="eye-group left-eye-group">
-                                                                    <circle class="eye-white left-eye-white" cx="42" cy="55" r="12" fill="#fff"/>
-                                                                    <circle class="eye-pupil left-eye-pupil" cx="42" cy="55" r="6" fill="#222"/>
-                                                                </g>
-                                                                <g class="eye-group right-eye-group">
-                                                                    <circle class="eye-white right-eye-white" cx="78" cy="55" r="12" fill="#fff"/>
-                                                                    <circle class="eye-pupil right-eye-pupil" cx="78" cy="55" r="6" fill="#222"/>
-                                                                </g>
-                                <path class="smile-mouth" d="M48 78 Q60 105 72 78 Q60 95 48 78 Z" stroke="#222" stroke-width="4" fill="#fff"/>
-                                <circle class="o-mouth" cx="60" cy="90" r="9" stroke="#222" stroke-width="4" fill="#fff"/>
-                                <rect class="mouth-hitbox" x="45" y="78" width="30" height="22" fill="transparent" style="cursor:pointer;"/>
-                            </svg>
+                    <div class="fun-squares-row">
+                        <div class="fun-square fun-square--smiley">
+                            <div class="smiley-face">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <circle cx="60" cy="60" r="55" fill="#FFD600" stroke="#E6B800" stroke-width="6"/>
+                                    <g class="eye-group left-eye-group">
+                                        <circle class="eye-white left-eye-white" cx="42" cy="55" r="12" fill="#fff"/>
+                                        <circle class="eye-pupil left-eye-pupil" cx="42" cy="55" r="6" fill="#222"/>
+                                    </g>
+                                    <g class="eye-group right-eye-group">
+                                        <circle class="eye-white right-eye-white" cx="78" cy="55" r="12" fill="#fff"/>
+                                        <circle class="eye-pupil right-eye-pupil" cx="78" cy="55" r="6" fill="#222"/>
+                                    </g>
+                                    <path class="smile-mouth" d="M48 78 Q60 105 72 78 Q60 95 48 78 Z" stroke="#222" stroke-width="4" fill="#fff"/>
+                                    <circle class="o-mouth" cx="60" cy="90" r="9" stroke="#222" stroke-width="4" fill="#fff"/>
+                                    <rect class="mouth-hitbox" x="45" y="78" width="30" height="22" fill="transparent" style="cursor:pointer;"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="fun-square fun-square--ball">
+                            <div class="bouncing-ball-container">
+                                <svg class="bouncing-ball" width="80" height="80" viewBox="0 0 80 80">
+                                    <defs>
+                                        <radialGradient id="ballGradient" cx="60%" cy="35%" r="60%">
+                                            <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+                                            <stop offset="60%" stop-color="#4fc3f7"/>
+                                            <stop offset="100%" stop-color="#01579b"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <ellipse cx="40" cy="40" rx="32" ry="32" fill="url(#ballGradient)"/>
+                                    <ellipse cx="40" cy="65" rx="20" ry="6" fill="#000" opacity="0.15"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="fun-square fun-square--extra1">
+                            <div class="extra-content coffee-cup-anim">
+                                <svg width="400" height="400" viewBox="0 0 400 400">
+                                    <!-- Cup shadow -->
+                                    <ellipse cx="200" cy="370" rx="80" ry="24" fill="#bfa87a" opacity="0.4" />
+                                    <!-- Cup body (more realistic, with a slight gradient) -->
+                                    <defs>
+                                        <radialGradient id="cupGradient" cx="50%" cy="60%" r="60%">
+                                            <stop offset="0%" stop-color="#fff"/>
+                                            <stop offset="100%" stop-color="#e0e0e0"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <ellipse class="cup-move" cx="200" cy="250" rx="80" ry="70" fill="url(#cupGradient)" stroke="#bbb" stroke-width="7" />
+                                    <!-- Cup rim -->
+                                    <ellipse class="cup-move" cx="200" cy="200" rx="80" ry="30" fill="#fff" stroke="#bbb" stroke-width="4" />
+                                    <!-- Coffee inside -->
+                                    <ellipse class="cup-move" cx="200" cy="210" rx="64" ry="18" fill="#6f4e37" />
+                                    <!-- Cup base -->
+                                    <ellipse class="cup-move" cx="200" cy="320" rx="36" ry="10" fill="#bbb" />
+                                    <!-- Cup handle (now attached to cup) -->
+                                    <path class="cup-move" d="M275 230 Q340 250 275 310 Q320 260 275 230" fill="none" stroke="#bbb" stroke-width="14" />
+                                    <!-- Steam (more curves) -->
+                                    <path class="steam" d="M170 180 Q150 120 200 140 Q250 160 230 100" fill="none" stroke="#444" stroke-width="7" stroke-linecap="round" />
+                                    <path class="steam" d="M230 170 Q270 80 250 180 Q270 220 320 120" fill="none" stroke="#444" stroke-width="4" stroke-linecap="round" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                                        <div class="fun-square fun-square--ball">
-                                                <div class="bouncing-ball-container">
-                                                        <svg class="bouncing-ball" width="80" height="80" viewBox="0 0 80 80">
-                                                                <defs>
-                                                                    <radialGradient id="ballGradient" cx="60%" cy="35%" r="60%">
-                                                                        <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
-                                                                        <stop offset="60%" stop-color="#4fc3f7"/>
-                                                                        <stop offset="100%" stop-color="#01579b"/>
-                                                                    </radialGradient>
-                                                                </defs>
-                                                                <ellipse cx="40" cy="40" rx="32" ry="32" fill="url(#ballGradient)"/>
-                                                                <ellipse cx="40" cy="65" rx="20" ry="6" fill="#000" opacity="0.15"/>
-                                                        </svg>
-                                                </div>
-                                        </div>
-                    <div class="fun-square fun-square--loading">
-                        <div class="spiral-canvas-container">
-                            <canvas id="spiral-canvas" width="220" height="220"></canvas>
+                    <div class="fun-squares-row">
+                        <div class="fun-square fun-square--loading">
+                            <div class="spiral-canvas-container">
+                                <canvas id="spiral-canvas" width="220" height="220"></canvas>
+                            </div>
+                        </div>
+                        <div class="fun-square fun-square--clock">
+                            <div class="clock-container">
+                                <canvas id="clock-canvas"></canvas>
+                            </div>
+                        </div>
+                        <div class="fun-square fun-square--extra2">
+                                                        <div class="extra-content heart-anim">
+                                                            <svg class="pumping-heart" width="160" height="160" viewBox="0 0 160 160">
+                                                                <path class="heart-shape" d="M80 135
+    L40 95
+    Q10 60 40 40
+    Q70 20 80 55
+    Q90 20 120 40
+    Q150 60 120 95
+    Z" fill="#ff4fcf" stroke="#e60073" stroke-width="6"/>
+                                                            </svg>
+                                                        </div>
+                                                        </div>
                         </div>
                     </div>
-                    <div class="fun-square fun-square--clock">
-                        <div class="clock-container">
-                            <canvas id="clock-canvas"></canvas>
-                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
