@@ -684,6 +684,14 @@ nav,
     overflow: visible;
 }
 
+/* Make top social icons white in dark mode */
+.dark__theme .social__link,
+.dark__theme .social__link .fa-brands,
+.dark__theme .social__link .fa-regular,
+.dark__theme .social__link .fa-solid {
+    color: #fff !important;
+}
+
 .social__link:nth-child(1) {
     animation-delay: 0.3s;
 }
