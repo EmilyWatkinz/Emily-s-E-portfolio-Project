@@ -19,6 +19,16 @@
 </script>
 </head>
 <body onmousemove="moveBackground(event)">
+    <!-- Modal Structure (only one instance) -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-half modal-left">
+            <div class="modal-content" id="modal-message-left"></div>
+        </div>
+        <div class="modal-half modal-right">
+            <div class="modal-content" id="modal-message-right"></div>
+        </div>
+        <span class="modal-close" id="modal-close-btn">&times;</span>
+    </div>
     <section id="landing-page">
         <nav>
             <figure>
@@ -287,7 +297,6 @@
                             </div>
                         </div>
                     </li>
-                        <!-- Add fade-up class to other project cards as needed -->
                     <li class="project">
                         <div class="project__wrapper">
                             <img src="./assets/Screenshot (36).png" class="project__img">
@@ -405,7 +414,7 @@
                                     <a href="https://github.com/EmilyWatkinz/skinstric-internship-project" target="_blank" class="project__description--link">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="https://skinstric-internship-project.vercel.app/next-step" target="_blank" class="project__description--link">
+                                    <a href="https://skinstric-internship-project.vercel.app/" target="_blank" class="project__description--link">
                                          <i class="fa-solid fa-link"></i>
                                     </a>
                                 </div>

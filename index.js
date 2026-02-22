@@ -1,4 +1,33 @@
 
+// Modal logic for sliding halves and message
+function toggleModal(messageLeft = "Hello from the left!", messageRight = "Hello from the right!") {
+    const modal = document.getElementById('custom-modal');
+    const left = document.getElementById('modal-message-left');
+    const right = document.getElementById('modal-message-right');
+    if (!modal) return;
+    if (modal.classList.contains('show')) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            left.textContent = '';
+            right.textContent = '';
+        }, 600); // Wait for animation to finish
+    } else {
+        left.textContent = messageLeft;
+        right.textContent = messageRight;
+        modal.classList.add('show');
+    }
+}
+
+// Ensure close button works for modal
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn = document.getElementById('modal-close-btn');
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            toggleModal();
+        };
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.getElementById('clock-canvas');
     if (!canvas) return;
